@@ -33,14 +33,16 @@ body {
     z-index: 1000;
 }
 
+/* Increased header padding to accommodate larger logo */
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 20px 20px; /* Increased from 15px to 20px */
+    min-height: 100px; /* Ensure header has minimum height for 100px logo */
 }
 
-/* HEADER LOGO - 75px HEIGHT */
+/* HEADER LOGO - 100px HEIGHT */
 .logo {
     display: flex;
     align-items: center;
@@ -51,11 +53,11 @@ body {
     align-items: center;
     text-decoration: none;
     color: inherit;
-    gap: 20px; /* Increased gap for larger logo */
+    gap: 25px; /* Increased gap for larger logo */
 }
 
 .logo-img {
-    height: 75px; /* EXACTLY 75px as requested */
+    height: 100px; /* EXACTLY 100px as requested */
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -66,7 +68,7 @@ body {
 
 .logo-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.7rem; /* Slightly larger to match bigger logo */
+    font-size: 1.8rem; /* Larger to match 100px logo */
     color: #2E8B57;
     font-weight: 700;
 }
@@ -117,11 +119,12 @@ body {
 }
 
 /* ===== HERO SECTION ===== */
+/* Increased margin-top to account for taller header */
 .hero {
     background: linear-gradient(135deg, rgba(46, 139, 87, 0.9) 0%, rgba(102, 205, 170, 0.9) 100%);
     color: white;
-    padding: 120px 0 80px;
-    margin-top: 70px;
+    padding: 140px 0 80px; /* Increased top padding from 120px to 140px */
+    margin-top: 100px; /* Increased from 70px to 100px for larger header */
 }
 
 .hero .container {
@@ -471,7 +474,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* FOOTER LOGO - 70px HEIGHT */
+/* FOOTER LOGO - 100px HEIGHT */
 .footer-logo {
     display: flex;
     flex-direction: column;
@@ -479,14 +482,14 @@ body {
 }
 
 .footer-logo-img {
-    height: 70px; /* EXACTLY 70px as requested */
+    height: 100px; /* EXACTLY 100px as requested */
     width: auto;
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Increased margin for larger logo */
     filter: brightness(0) invert(1); /* Makes logo white for dark background */
 }
 
 .footer-logo h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem; /* Slightly larger to match bigger logo */
     margin-bottom: 10px;
 }
 
@@ -597,7 +600,8 @@ body {
     }
     
     .hero {
-        padding: 100px 0 60px;
+        padding: 120px 0 60px; /* Adjusted for mobile */
+        margin-top: 80px; /* Adjusted for mobile */
     }
     
     .hero h2 {
@@ -620,17 +624,22 @@ body {
         flex-direction: column;
     }
     
-    /* Mobile logo adjustments */
+    /* Mobile logo adjustments for 100px logos */
     .logo-img {
-        height: 60px; /* Proportional to 75px desktop */
+        height: 70px; /* Proportional to 100px desktop */
     }
     
     .logo-text {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
     
     .logo a {
         gap: 15px; /* Smaller gap on mobile */
+    }
+    
+    .header .container {
+        padding: 15px 20px; /* Adjusted padding for mobile */
+        min-height: auto;
     }
     
     .footer-logo {
@@ -639,8 +648,12 @@ body {
     }
     
     .footer-logo-img {
-        height: 55px; /* Proportional to 70px desktop */
-        margin-bottom: 10px;
+        height: 70px; /* Proportional to 100px desktop */
+        margin-bottom: 15px;
+    }
+    
+    .footer-logo h3 {
+        font-size: 1.4rem;
     }
 }
 
@@ -654,7 +667,12 @@ body {
     }
     
     .logo-img {
-        height: 50px; /* Proportional to 75px desktop */
+        height: 60px; /* Proportional to 100px desktop */
+    }
+    
+    .hero {
+        padding: 100px 0 60px; /* Adjusted for small mobile */
+        margin-top: 70px; /* Adjusted for small mobile */
     }
     
     .hero h2 {
@@ -679,11 +697,22 @@ body {
     }
     
     .footer-logo-img {
-        height: 45px; /* Proportional to 70px desktop */
+        height: 60px; /* Proportional to 100px desktop */
     }
     
     /* Adjust header padding for larger logo on mobile */
     .header .container {
         padding: 12px 15px;
+    }
+    
+    /* On very small screens, hide logo text and show only logo */
+    @media (max-width: 360px) {
+        .logo-text {
+            display: none;
+        }
+        
+        .logo a {
+            gap: 0;
+        }
     }
 }
