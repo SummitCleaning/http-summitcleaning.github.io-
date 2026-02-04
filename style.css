@@ -40,7 +40,7 @@ body {
     padding: 15px 20px;
 }
 
-/* UPDATED LOGO STYLES - LARGER SIZES */
+/* HEADER LOGO - 75px HEIGHT */
 .logo {
     display: flex;
     align-items: center;
@@ -51,12 +51,11 @@ body {
     align-items: center;
     text-decoration: none;
     color: inherit;
-    gap: 15px;
+    gap: 20px; /* Increased gap for larger logo */
 }
 
-/* HEADER LOGO SIZE INCREASED */
 .logo-img {
-    height: 65px; /* Increased from 50px to 65px */
+    height: 75px; /* EXACTLY 75px as requested */
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -67,7 +66,7 @@ body {
 
 .logo-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.6rem; /* Slightly larger text */
+    font-size: 1.7rem; /* Slightly larger to match bigger logo */
     color: #2E8B57;
     font-weight: 700;
 }
@@ -472,16 +471,15 @@ body {
     margin-bottom: 50px;
 }
 
-/* UPDATED FOOTER LOGO - LARGER SIZE */
+/* FOOTER LOGO - 70px HEIGHT */
 .footer-logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-/* FOOTER LOGO SIZE INCREASED */
 .footer-logo-img {
-    height: 55px; /* Increased from 40px to 55px */
+    height: 70px; /* EXACTLY 70px as requested */
     width: auto;
     margin-bottom: 15px;
     filter: brightness(0) invert(1); /* Makes logo white for dark background */
@@ -622,13 +620,17 @@ body {
         flex-direction: column;
     }
     
-    /* Mobile logo adjustments - LARGER */
+    /* Mobile logo adjustments */
     .logo-img {
-        height: 55px; /* Increased from 40px to 55px */
+        height: 60px; /* Proportional to 75px desktop */
     }
     
     .logo-text {
-        font-size: 1.3rem; /* Slightly larger */
+        font-size: 1.3rem;
+    }
+    
+    .logo a {
+        gap: 15px; /* Smaller gap on mobile */
     }
     
     .footer-logo {
@@ -637,8 +639,8 @@ body {
     }
     
     .footer-logo-img {
+        height: 55px; /* Proportional to 70px desktop */
         margin-bottom: 10px;
-        height: 50px; /* Slightly smaller for mobile */
     }
 }
 
@@ -648,11 +650,11 @@ body {
     }
     
     .logo-text {
-        font-size: 1.1rem; /* Adjusted for larger logo */
+        font-size: 1.2rem;
     }
     
     .logo-img {
-        height: 45px; /* Increased from 35px to 45px */
+        height: 50px; /* Proportional to 75px desktop */
     }
     
     .hero h2 {
@@ -668,7 +670,8 @@ body {
     /* Stack logo and text vertically on very small screens */
     .logo a {
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
+        align-items: flex-start;
     }
     
     .logo-img {
@@ -676,6 +679,11 @@ body {
     }
     
     .footer-logo-img {
-        height: 45px; /* Adjusted for mobile */
+        height: 45px; /* Proportional to 70px desktop */
+    }
+    
+    /* Adjust header padding for larger logo on mobile */
+    .header .container {
+        padding: 12px 15px;
     }
 }
