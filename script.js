@@ -1,4 +1,4 @@
-// Summit Cleaning Services - JavaScript
+// Summit Cleaning Services - JavaScript (Updated for no form)
 document.addEventListener('DOMContentLoaded', function() {
     
     // 1. Mobile Menu Toggle
@@ -28,29 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         yearElement.textContent = currentYear;
     }
     
-    // 3. Contact Form Submission
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const name = this.querySelector('input[type="text"]').value;
-            const phone = this.querySelector('input[type="tel"]').value;
-            const service = this.querySelector('select').value;
-            
-            // Show success message
-            alert(`Thank you ${name}! We received your request for ${service}. We'll call you at ${phone} within 24 hours.`);
-            
-            // Reset form
-            this.reset();
-            
-            // In a real website, you would send this data to a server
-            // Since this is static hosting, we use a simple alert
-        });
-    }
-    
-    // 4. Active Navigation Link Highlighting
+    // 3. Active Navigation Link Highlighting
     const navLinks = document.querySelectorAll('.nav a');
     const sections = document.querySelectorAll('section');
     
@@ -76,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', highlightNavLink);
     
-    // 5. Smooth Scroll for Navigation Links
+    // 4. Smooth Scroll for Navigation Links
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             if (this.getAttribute('href').startsWith('#')) {
@@ -99,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // 6. Add "Opens in new tab" for external links
+    // 5. Add "Opens in new tab" for external links
     document.querySelectorAll('a[href^="http"]').forEach(link => {
         if (!link.getAttribute('href').includes(window.location.hostname)) {
             link.setAttribute('target', '_blank');
@@ -107,22 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // 7. Form Validation Enhancement
-    const phoneInput = document.querySelector('input[type="tel"]');
-    if (phoneInput) {
-        phoneInput.addEventListener('input', function() {
-            // Format phone number as (XXX) XXX-XXXX
-            let value = this.value.replace(/\D/g, '');
-            if (value.length > 3 && value.length <= 6) {
-                value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
-            } else if (value.length > 6) {
-                value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
-            }
-            this.value = value;
-        });
-    }
-    
-    // 8. Service Cards Animation on Scroll
+    // 6. Service Cards Animation on Scroll
     const serviceCards = document.querySelectorAll('.service-card');
     
     const observerOptions = {
@@ -146,17 +109,15 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
     
-    // 9. Add Loading Animation
-    window.addEventListener('load', function() {
-        document.body.classList.add('loaded');
-        
-        // Remove loading state after a delay
-        setTimeout(() => {
-            const loadingOverlay = document.getElementById('loadingOverlay');
-            if (loadingOverlay) {
-                loadingOverlay.style.display = 'none';
-            }
-        }, 500);
+    // 7. Add phone number formatting (optional)
+    const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+    phoneLinks.forEach(link => {
+        const phone = link.getAttribute('href').replace('tel:', '');
+        if (phone && phone.length === 11) {
+            // Format as (XXX) XXX-XXXX
+            const formatted = `(${phone.substring(1, 4)}) ${phone.substring(4, 7)}-${phone.substring(7)}`;
+            link.textContent = link.textContent.includes('(437)') ? link.textContent : formatted;
+        }
     });
     
     console.log('Summit Cleaning Services website loaded successfully!');
