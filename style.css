@@ -40,7 +40,7 @@ body {
     padding: 15px 20px;
 }
 
-/* UPDATED LOGO STYLES - Replace mountain icon with image */
+/* UPDATED LOGO STYLES - LARGER SIZES */
 .logo {
     display: flex;
     align-items: center;
@@ -54,14 +54,20 @@ body {
     gap: 15px;
 }
 
+/* HEADER LOGO SIZE INCREASED */
 .logo-img {
-    height: 50px;
+    height: 65px; /* Increased from 50px to 65px */
     width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05);
 }
 
 .logo-text {
     font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem; /* Slightly larger text */
     color: #2E8B57;
     font-weight: 700;
 }
@@ -466,15 +472,16 @@ body {
     margin-bottom: 50px;
 }
 
-/* UPDATED FOOTER LOGO STYLES - Replace mountain icon with image */
+/* UPDATED FOOTER LOGO - LARGER SIZE */
 .footer-logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
+/* FOOTER LOGO SIZE INCREASED */
 .footer-logo-img {
-    height: 40px;
+    height: 55px; /* Increased from 40px to 55px */
     width: auto;
     margin-bottom: 15px;
     filter: brightness(0) invert(1); /* Makes logo white for dark background */
@@ -615,13 +622,13 @@ body {
         flex-direction: column;
     }
     
-    /* Mobile logo adjustments */
+    /* Mobile logo adjustments - LARGER */
     .logo-img {
-        height: 40px;
+        height: 55px; /* Increased from 40px to 55px */
     }
     
     .logo-text {
-        font-size: 1.2rem;
+        font-size: 1.3rem; /* Slightly larger */
     }
     
     .footer-logo {
@@ -631,6 +638,7 @@ body {
     
     .footer-logo-img {
         margin-bottom: 10px;
+        height: 50px; /* Slightly smaller for mobile */
     }
 }
 
@@ -640,11 +648,11 @@ body {
     }
     
     .logo-text {
-        font-size: 1rem;
+        font-size: 1.1rem; /* Adjusted for larger logo */
     }
     
     .logo-img {
-        height: 35px;
+        height: 45px; /* Increased from 35px to 45px */
     }
     
     .hero h2 {
@@ -660,10 +668,14 @@ body {
     /* Stack logo and text vertically on very small screens */
     .logo a {
         flex-direction: column;
-        gap: 5px;
+        gap: 8px;
     }
     
     .logo-img {
         margin-bottom: 5px;
+    }
+    
+    .footer-logo-img {
+        height: 45px; /* Adjusted for mobile */
     }
 }
