@@ -40,21 +40,30 @@ body {
     padding: 15px 20px;
 }
 
+/* UPDATED LOGO STYLES - Replace mountain icon with image */
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
 }
 
-.logo i {
-    font-size: 2rem;
-    color: #2E8B57;
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    gap: 15px;
 }
 
-.logo h1 {
+.logo-img {
+    height: 50px;
+    width: auto;
+}
+
+.logo-text {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
     color: #2E8B57;
+    font-weight: 700;
 }
 
 .nav {
@@ -457,15 +466,18 @@ body {
     margin-bottom: 50px;
 }
 
+/* UPDATED FOOTER LOGO STYLES - Replace mountain icon with image */
 .footer-logo {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
-.footer-logo i {
-    font-size: 2.5rem;
+.footer-logo-img {
+    height: 40px;
+    width: auto;
     margin-bottom: 15px;
+    filter: brightness(0) invert(1); /* Makes logo white for dark background */
 }
 
 .footer-logo h3 {
@@ -602,6 +614,24 @@ body {
     .contact-container {
         flex-direction: column;
     }
+    
+    /* Mobile logo adjustments */
+    .logo-img {
+        height: 40px;
+    }
+    
+    .logo-text {
+        font-size: 1.2rem;
+    }
+    
+    .footer-logo {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-logo-img {
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -609,8 +639,12 @@ body {
         padding: 0 15px;
     }
     
-    .logo h1 {
-        font-size: 1.2rem;
+    .logo-text {
+        font-size: 1rem;
+    }
+    
+    .logo-img {
+        height: 35px;
     }
     
     .hero h2 {
@@ -621,5 +655,15 @@ body {
         padding: 12px 25px;
         width: 100%;
         justify-content: center;
+    }
+    
+    /* Stack logo and text vertically on very small screens */
+    .logo a {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .logo-img {
+        margin-bottom: 5px;
     }
 }
