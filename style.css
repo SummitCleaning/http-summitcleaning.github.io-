@@ -67,7 +67,7 @@ body {
 .logo-text {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.8rem;
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     font-weight: 700;
 }
 
@@ -87,16 +87,16 @@ body {
 }
 
 .nav a:hover {
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
 }
 
 .nav a.active {
-    color: #2E8B57;
-    background-color: rgba(46, 139, 87, 0.1);
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
+    background-color: rgba(37, 99, 235, 0.1); /* CHANGED FROM GREEN TO BLUE */
 }
 
 .cta-nav {
-    background-color: #2E8B57;
+    background-color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     color: white !important;
     padding: 10px 20px !important;
     border-radius: 50px;
@@ -104,7 +104,7 @@ body {
 }
 
 .cta-nav:hover {
-    background-color: #267349;
+    background-color: #1d4ed8; /* CHANGED FROM GREEN TO BLUE */
 }
 
 .mobile-menu-btn {
@@ -112,13 +112,13 @@ body {
     background: none;
     border: none;
     font-size: 1.5rem;
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     cursor: pointer;
 }
 
 /* ===== HERO SECTION ===== */
 .hero {
-    background: linear-gradient(135deg, rgba(46, 139, 87, 0.9) 0%, rgba(102, 205, 170, 0.9) 100%);
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.9) 0%, rgba(96, 165, 250, 0.9) 100%); /* CHANGED FROM GREEN TO BLUE */
     color: white;
     padding: 140px 0 80px;
     margin-top: 100px;
@@ -167,7 +167,7 @@ body {
 
 .btn-primary {
     background-color: white;
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
 }
 
 .btn-primary:hover {
@@ -184,7 +184,7 @@ body {
 
 .btn-secondary:hover {
     background-color: white;
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
 }
 
 .hero-image {
@@ -200,7 +200,7 @@ body {
 }
 
 .hero-card h3 {
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     margin-bottom: 20px;
     font-size: 1.5rem;
     display: flex;
@@ -220,7 +220,7 @@ body {
 }
 
 .hero-card li i {
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
 }
 
 /* ===== SERVICES SECTION ===== */
@@ -233,7 +233,7 @@ body {
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     font-size: 2.5rem;
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     margin-bottom: 15px;
 }
 
@@ -267,12 +267,12 @@ body {
 
 .service-icon {
     font-size: 2.5rem;
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     margin-bottom: 20px;
 }
 
 .service-card h3 {
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     margin-bottom: 15px;
     font-size: 1.4rem;
 }
@@ -301,7 +301,7 @@ body {
 /* ===== ABOUT SECTION ===== */
 .about {
     padding: 100px 0;
-    background-color: #f0f7f4;
+    background-color: #f0f8ff; /* CHANGED FROM GREEN TO BLUE */
 }
 
 .about .container {
@@ -338,7 +338,7 @@ body {
 
 .stat h3 {
     font-size: 2.5rem;
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     margin-bottom: 5px;
 }
 
@@ -380,7 +380,7 @@ body {
 }
 
 .contact-info h3 {
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     margin-bottom: 30px;
     display: flex;
     align-items: center;
@@ -402,7 +402,7 @@ body {
 }
 
 .contact-item i {
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     font-size: 1.4rem;
     margin-top: 5px;
     flex-shrink: 0;
@@ -431,21 +431,21 @@ body {
 }
 
 .contact-link {
-    color: #2E8B57;
+    color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     text-decoration: none;
     font-weight: 500;
     transition: color 0.3s;
 }
 
 .contact-link:hover {
-    color: #267349;
+    color: #1d4ed8; /* CHANGED FROM GREEN TO BLUE */
     text-decoration: underline;
 }
 
 .contact-cta {
     margin-top: 40px;
     padding-top: 30px;
-    border-top: 2px solid #2E8B57;
+    border-top: 2px solid #2563eb; /* CHANGED FROM GREEN TO BLUE */
     text-align: center;
 }
 
@@ -473,7 +473,7 @@ body {
 
 /* ===== FOOTER ===== */
 .footer {
-    background-color: #2E8B57;
+    background-color: #2563eb; /* CHANGED FROM GREEN TO BLUE */
     color: white;
     padding: 60px 0 30px;
 }
